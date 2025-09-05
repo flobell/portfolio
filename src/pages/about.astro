@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Pedro Flores" description="About Pedro Flores Lorem Ipsum">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+			>
+				<!-- <img
+					width="1553"
+					height="873"
+					src="/assets/at-work.jpg"
+					alt="Pedro Flores at work with a colleague"
+				/> -->
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						I am a Backend Developer with a strong foundation in building scalable web applications and APIs,
+						particularly in complex systems for operations, administration, finance, and logistics. I have experience working remotely with international teams, 
+						providing robust backend solutions across the United States and Latin America.
+					</p>
+					<p>
+						Over the years, I have taken on both technical and leadership roles. I enjoy designing architecture that balances performance, maintainability, and business needs, 
+						always thinking long-term. My work spans from internal enterprise platforms to customer-facing applications, and I consistently focus on improving 
+						code quality, response time, and data modeling.
+					</p>
+					<p>
+						My career began in Venezuela, moved through Latin America, and now continues from the United States, where I continue to grow 
+						as a strategy-minded engineer who values clear communication, technical mentorship, and delivering software that works.
+					</p>
+				</div>
+			</section>
+			
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<p>
+						<b>Bachelor of Science in Computer Engineering</b><br />
+						Universidad Católica Andres Bello (UCAB)<br />
+						2013 – 2019
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p><strong>Languages:</strong> Python, PHP, Java, JavaScript, TypeScript</p>
+					<p><strong>Databases:</strong> PostgreSQL, MySQL, PL/SQL</p>
+					<p><strong>Cloud & Services:</strong> AWS (EC2, RDS, S3, Lambda, CloudWatch), Azure (Cognitive Services), Firebase (Messaging), Twilio (SMS, Email), SendGrid</p>
+					<p><strong>Tools & Platforms:</strong> Git, SVN, Docker, SQL, Postman, Jenkins, Pentaho Data Integration, VSCode, PgAdmin, Slack</p>
+					<p><strong>Frameworks:</strong> Zend, Laravel, Flask, Hibernate ORM</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
