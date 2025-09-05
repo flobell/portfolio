@@ -29,23 +29,26 @@ const projects = (await getCollection('work'))
 	<div class="stack gap-20 lg:gap-48">
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
-				<Hero
-					title="Hello, my name is Jeanine White"
-					tagline="I am a Creative Developer who is currently based in Portland, Oregon."
-					align="start"
-				>
+				<Hero title="Hello, I'm Pedro Flores" align="start">
+					<p>
+						A <b>Software Engineer</b>, with a strong focus on performance, security, and maintainable code.
+					</p>
+			
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
+						<Pill><Icon icon="rocket-launch" size="1.33em" /> Software Engineer</Pill>
+						<Pill><Icon icon="code" size="1.33em" /> Senior Backend Developer</Pill>
+						<Pill><Icon icon="terminal-window" size="1.33em" /> API Developer</Pill>
+						<Pill><Icon icon="strategy" size="1.33em" /> Database Administrator</Pill>
+						<!-- <Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
+						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill> -->
 					</div>
 				</Hero>
 
 				<img
-					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
+					alt="Pedro Flores smiling in a red plaid shirt and tortoise shell glasses"
 					width="480"
 					height="620"
-					src="/assets/portrait.jpg"
+					src="/assets/profile.jpg"
 				/>
 			</header>
 
@@ -79,7 +82,7 @@ const projects = (await getCollection('work'))
 				</div>
 			</section>
 
-			<section class="section with-background bg-variant">
+			<!-- <section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Mentions</h3>
 					<p>
@@ -99,7 +102,7 @@ const projects = (await getCollection('work'))
 						}
 					</Grid>
 				</div>
-			</section>
+			</section> -->
 		</main>
 
 		<ContactCTA />
